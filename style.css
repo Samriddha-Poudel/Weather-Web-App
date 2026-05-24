@@ -79,7 +79,7 @@ body {
     }
 
     100% {
-        transform: rotate(369deg);
+        transform: rotate(360deg);
     }
 }
 

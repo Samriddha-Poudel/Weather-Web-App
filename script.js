@@ -68,17 +68,20 @@ function updateWeather(data){
 
     if(weather.condition.text.includes('Sunny') || weather.condition.text.includes("Clear") ){
         sunIcon.style.display='block';
-    }else if(weather.condition.text.includes('Cloudy') || weather.condition.text.includes('Overcast')){
+    }else if(weather.condition.text.includes('Cloudy') || weather.condition.text.includes('Overcast') || weather.condition.text.includes('Partly')){
         cloudIcon.style.display='block';
-    }else if(weather.condition.text.includes('Rain')){
+    }else if(weather.condition.text.includes('Rain') || weather.condition.text.includes('Light rain')){
         rainIcon.style.display='block';
     }else if(weather.condition.text.includes('Snow')){
         snowIcon.style.display='block';
-    }else if(weather.condition.text.includes('Thunderstorm')){
+    }else if(weather.condition.text.includes('Thunder')){
         boltIcon.style.display='block';
     }else if(weather.condition.text.includes('Night') || weather.condition.text.includes('Moon')){
-
         moonIcon.style.display='block';
+    }
+
+    if(weather.wind_kph > 0){
+        windIcon.style.display='block'; 
     }
 
     
