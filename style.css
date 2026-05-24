@@ -106,19 +106,7 @@ body {
 }
 
 
-#temperature:before {
-    content: "\f2c9";
-    font-family: "Font Awesome 5 free";
-    font-weight: 900;
-    position: absolute;
-    left: 3rem;
-    top: 0;
-    font-size: 24px;
-    color: #ffcc00;
-    animation: flash 1s linear infinite;
 
-
-}
 
 #description,
 #humidity,
@@ -130,17 +118,7 @@ body {
     position: relative;
 }
 
-#humidity:before {
-    content: "\f043";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 6rem;
-    top: 0;
-    font-size: 24px;
-    color: #00aaff;
-    animation: flash 1s linear infinite;
-}
+
 
 .wind {
     display: flex;
@@ -175,6 +153,16 @@ body {
     
 }
 
+.fa-thermometer-half{
+color:#ffcc00;
+font-size:22px;
+}
+
+.fa-tint{
+    color:#00aaff;
+    font-size:22px;
+}
+
 .fas.fa-sun{
      color:#ffd700;
      animation:rotate 10s linear infinite;
@@ -193,14 +181,14 @@ body {
 
 .fas.fa-cloud-rain{
     color:#76c7c0;
-    animation:float 7s ease-in-out infinite, rain 3s linear infinite;
+    animation:float 7s ease-in-out infinite;
 
 }
 
 
 .fas.fa-snowflake{
     color:#00aaff;
-    animation: float 7s ease-in-out infinite, snowey 5s linear infinite;
+    animation: float 7s ease-in-out infinite;
 }
 
 .fas.fa-bolt{

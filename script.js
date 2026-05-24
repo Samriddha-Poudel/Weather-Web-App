@@ -28,7 +28,7 @@ async function getweather(){
         if(!response.ok) throw new Error("city not found");
 const data= await response.json();
         updateWeather(data);
-        updateDatetime();
+        updateDatetime(data);
     }catch(error){
         alert(error.message);
     }finally{
@@ -42,9 +42,9 @@ function updateWeather(data){
 
     document.getElementById('weather').style.display='block';
     document.getElementById('city-name').innerText = data.location.name;
-    document.getElementById('temperature').innerHTML = `Temperature:${weather.temp_c}°C`;
+    document.getElementById('temp-value').innerHTML = `Temperature:${weather.temp_c}°C`;
     document.getElementById('description').innerText =`Description: ${weather.condition.text}`;
-    document.getElementById('humidity').innerText=`Humidity:${weather.humidity}%`;
+    document.getElementById('humidity-value').innerText=`Humidity:${weather.humidity}%`;
     document.getElementById('wind').innerText=`wind speed: ${weather.wind_kph}kph`;
 
     const weatherIcon = document.getElementById('weather-icon');
@@ -81,19 +81,15 @@ function updateWeather(data){
         moonIcon.style.display='block';
     }
 
-    if(weather.wind_kph > 0){
-        windIcon.style.display='block';
-    }
+    
 }
 
 
-function updateDatetime(){
-const now =new Date();
-const dateValue = now.toLocaleDateString();
-const timeValue = now.toLocaleTimeString();
-const yearValue = now.getFullYear();
+function updateDatetime(data){
+const localtime = data.location.localtime;  
+const dateTime = new Date(localtime); 
 
-document.getElementById('date-value').innerText = dateValue;
-document.getElementById('time-value').innerText = timeValue;
-document.getElementById('year-value').innerText= yearValue;
+document.getElementById('date-value').innerText =dateTime.toLocaleDateString();
+document.getElementById('time-value').innerText = dateTime.toLocaleTimeString();
+document.getElementById('year-value').innerText= dateTime.getFullYear();
 }
