@@ -6,10 +6,16 @@ async function getweather(){
         return;
     }
 
-    const apikey= ;
-    const url= ``;
+    const apikey='5badf9a741mshd28f4a72bbd7729p1bb00bjsncae7b53fe9f4' ;
+    const url= `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`;
 
     const options={
+        method: 'GET',
+	headers: {
+		'x-rapidapi-key': '5badf9a741mshd28f4a72bbd7729p1bb00bjsncae7b53fe9f4',
+		'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+	
+	}
 
     };
 
@@ -20,9 +26,8 @@ async function getweather(){
     try{
         const response = await fetch(url, options);
         if(!response.ok) throw new Error("city not found");
-
-        const date = await response.json();
-        updateWeather(date);
+const data= await response.json();
+        updateWeather(data);
         updateDatetime();
     }catch(error){
         alert(error.message);
@@ -61,7 +66,7 @@ function updateWeather(data){
     windIcon.style.display='none';
 
 
-    if(weather.condition.text.includes('Sunnny') || weather.conndition.text.includes("Clear") ){
+    if(weather.condition.text.includes('Sunny') || weather.condition.text.includes("Clear") ){
         sunIcon.style.display='block';
     }else if(weather.condition.text.includes('Cloudy') || weather.condition.text.includes('Overcast')){
         cloudIcon.style.display='block';
@@ -82,4 +87,13 @@ function updateWeather(data){
 }
 
 
-function 
+function updateDatetime(){
+const now =new Date();
+const dateValue = now.toLocaleDateString();
+const timeValue = now.toLocaleTimeString();
+const yearValue = now.getFullYear();
+
+document.getElementById('date-value').innerText = dateValue;
+document.getElementById('time-value').innerText = timeValue;
+document.getElementById('year-value').innerText= yearValue;
+}
