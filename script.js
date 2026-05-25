@@ -6,13 +6,13 @@ async function getweather(){
         return;
     }
 
-    const apikey='5badf9a741mshd28f4a72bbd7729p1bb00bjsncae7b53fe9f4' ;
+    const apikey=config.apikey;
     const url= `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`;
 
     const options={
         method: 'GET',
 	headers: {
-		'x-rapidapi-key': '5badf9a741mshd28f4a72bbd7729p1bb00bjsncae7b53fe9f4',
+		'x-rapidapi-key': apikey,
 		'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
 	
 	}
