@@ -6,7 +6,7 @@ async function getweather(){
         return;
     }
 
-    const apikey=config.apikey;
+    const apikey=import.meta.env.VITE_API_KEY;
     const url= `https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`;
 
     const options={
