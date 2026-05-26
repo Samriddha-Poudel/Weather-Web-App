@@ -11,4 +11,7 @@ it to the user.
 
 # How to use it :
 To use this Web app you just have to visti https://samriddha-mausam.netlify.app/ and all set .
-  
+
+
+# Note:
+i used ai for hiding the api key to  deplyoing it in netlify it was such a complex proccess i am a beegineer ai used backed to do that but it doesn't worked so i have used the API in js at last there is no other options. 
