@@ -10,8 +10,8 @@ it to the user.
 - JS: JS is used in this project to call the API and get the data .
 
 # How to use it :
-To use this Web app you just have to visti https://samriddha-mausam.netlify.app/ and all set .
+To use this Web app you just have to visti https://samriddha-poudel.github.io/Weather-Web-App/ and all set .
 
 
 # Note:
-I used ai for hiding the api key to  deplyoing it in netlify it was such a complex proccess i am a beegineer ai used backed to do that but it doesn't worked so i have used the API in js at last there is no other options. 
+I used ai for hiding the api key to  deplyoing it in netlify it was such a complex proccess i am a beegineer ai used backed to do that but it doesn't worked so i have used the API in js at last there is no other options. This was mine starting project that i have deplyod in beest i have deplyod all of mine project through netlify which i have sumbited and my free trail of netlify has been full of limit so my website is down in netlify so i have uploaded it from github pages so you can cehck it out from here .
